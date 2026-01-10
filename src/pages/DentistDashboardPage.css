@@ -1,0 +1,257 @@
+/* ==========================
+   Desktop Layout
+=========================== */
+.dashboard-layout {
+  display: flex;
+  min-height: calc(100vh - 160px);
+  background-color: #eef2f5;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #1e2f45;
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-title {
+  font-size: 1.6em;
+  text-align: center;
+  color: #00a8ff;
+  margin-bottom: 20px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar-menu li:hover,
+.sidebar-menu li.active {
+  background-color: #00a8ff;
+}
+
+.logout-button {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px;
+  background-color: #d64545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #b73232;
+}
+
+/* Main Panel */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+  border-top-left-radius: 12px;
+}
+
+/* Search and Filter Container */
+.search-filter-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #00a8ff;
+  box-shadow: 0 0 8px rgba(0, 168, 255, 0.2);
+}
+
+.filter-box {
+  min-width: 200px;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #00a8ff;
+  box-shadow: 0 0 8px rgba(0, 168, 255, 0.2);
+}
+
+.clear-filters-btn {
+  padding: 12px 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.clear-filters-btn:hover {
+  background-color: #e68900;
+}
+
+/* Results Count */
+.results-count {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+
+/* ==========================
+   Mobile Responsive Design
+=========================== */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #00a8ff;
+  }
+
+  /* Sidebar Title */
+  .sidebar-title {
+    font-size: 1.3em;
+    margin: 0;
+  }
+
+  /* Convert sidebar menu to horizontal buttons */
+  .sidebar-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .sidebar-menu li {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  /* Logout button becomes small right-side button */
+  .logout-button {
+    padding: 8px 14px;
+    width: auto;
+    margin-top: 0;
+    font-size: 0.85rem;
+  }
+
+  /* Main content full width */
+  .main-content {
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .search-filter-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box,
+  .filter-box {
+    min-width: 100%;
+  }
+
+  .clear-filters-btn {
+    width: 100%;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .sidebar-menu li {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .sidebar-title {
+    font-size: 1.1rem;
+  }
+
+  .logout-button {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .main-content {
+    padding: 12px;
+  }
+
+  .search-filter-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box,
+  .filter-box {
+    min-width: 100%;
+  }
+
+  .search-input,
+  .filter-select {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .clear-filters-btn {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .results-count {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+}

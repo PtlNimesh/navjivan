@@ -1,0 +1,239 @@
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+}
+
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x800.png?text=Dental+Clinic') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 60px 15px;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.hero-section p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  max-width: 90%;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 80px 20px;
+    height: 100vh;
+  }
+  .hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .hero-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 100px 0;
+    height: 100vh;
+  }
+  .hero-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 0.95rem;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Placeholder for other sections */
+.services-section, .about-section, .contact-section, .appointment-booking-section {
+  min-height: 100vh;
+  height: 100vh;
+  padding: 40px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.services-section {
+  background-color: #e9f7ff;
+}
+
+.about-section {
+  background-color: #fff;
+}
+
+.appointment-booking-section {
+  background-color: #f5f9ff;
+}
+
+.contact-section {
+  background-color: #f0f0f0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  line-height: 1.3;
+  width: 100%;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .services-section, .about-section, .contact-section, .appointment-booking-section {
+    padding: 50px 20px;
+    height: 100vh;
+  }
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-section, .about-section, .contact-section, .appointment-booking-section {
+    padding: 60px 0;
+    height: 100vh;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+.service-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.service-item h3 {
+  color: #007bff;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Wrapper for services grid within full-screen section */
+.services-grid {
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (min-width: 768px) {
+  .service-item {
+    display: inline-block;
+    width: calc(50% - 20px);
+    margin: 10px;
+  }
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-item {
+    width: calc(33.333% - 30px);
+    margin: 15px;
+    vertical-align: top;
+  }
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 12px 0;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .contact-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+}

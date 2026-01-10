@@ -1,0 +1,236 @@
+.appointment-table-container {
+  width: 100%;
+}
+
+.appointment-table-container h3 {
+  color: #1e2f45;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.appointment-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.appointment-table-container table th,
+.appointment-table-container table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.appointment-table-container table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.appointment-table-container table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Status Badge Styling */
+.status-badge {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.status-scheduled {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-scheduled:hover {
+  background-color: #ffeaa7;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-completed:hover {
+  background-color: #c3e6cb;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-cancelled:hover {
+  background-color: #f5c6cb;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #da190b;
+  box-shadow: 0 2px 6px rgba(244, 67, 54, 0.3);
+}
+
+/* ============================
+   Mobile Responsive Styles
+============================ */
+
+@media (max-width: 1024px) {
+  .appointment-table-container table th,
+  .appointment-table-container table td {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .action-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Convert table to card layout on tablets and mobile */
+  .appointment-table-container table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .appointment-table-container table thead {
+    display: none;
+  }
+
+  .appointment-table-container table tbody {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .appointment-table-container table tr {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .appointment-table-container table td {
+    border: none;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .appointment-table-container table td:last-child {
+    border-bottom: none;
+  }
+
+  .appointment-table-container table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #00a8ff;
+    text-transform: capitalize;
+    grid-column: 1;
+  }
+
+  .action-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+  }
+
+  .appointment-table-container table tr:nth-child(even) {
+    background-color: #fff;
+  }
+
+  .status-badge {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-table-container {
+    padding: 0;
+  }
+
+  .appointment-table-container h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .appointment-table-container table {
+    border-spacing: 0 10px;
+  }
+
+  .appointment-table-container table tr {
+    padding: 0;
+    margin-bottom: 5px;
+  }
+
+  .appointment-table-container table td {
+    padding: 10px;
+    grid-template-columns: 90px 1fr;
+    font-size: 0.9rem;
+  }
+
+  .appointment-table-container table td::before {
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .action-btn {
+    padding: 7px 12px;
+    font-size: 13px;
+    margin-right: 6px;
+  }
+
+  .status-badge {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}

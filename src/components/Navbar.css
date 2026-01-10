@@ -1,0 +1,157 @@
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Brand block contains logo and doctor name */
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.brand .logo {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+.doctor-name {
+  padding: 0;
+  margin: 0 0 0 12px;
+  color: #58606a;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1;
+  opacity: 0.95;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-links li {
+  margin-left: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white !important;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.login-button:hover {
+  background-color: #0056b3 !important;
+}
+
+/* Responsive for tablet and above */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 15px 0;
+  }
+  .navbar .container {
+    padding: 0 20px;
+  }
+  .brand .logo {
+    font-size: 1.5rem;
+  }
+  .doctor-name {
+    font-size: 0.85rem;
+  }
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+  .login-button {
+    padding: 8px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive for large desktop */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 15px 0;
+  }
+  .navbar .container {
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+  }
+  .brand .logo {
+    font-size: 1.9rem;
+  }
+  .doctor-name {
+    font-size: 0.95rem;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+  .nav-links a {
+    font-size: 1rem;
+  }
+  .login-button {
+    padding: 8px 15px;
+  }
+}
+
+/* On small screens, keep nav and brand stacked cleanly */
+@media (max-width: 767px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .brand {
+    width: 100%;
+  }
+}
