@@ -4,7 +4,7 @@
 
 // Get the backend URL from environment variables
 // Defaults to localhost for local development
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://navjivanspringboot-production.up.railway.app';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://navjivanspringboot-production.up.railway.app';
 
 // Log the API URL in development mode for debugging
 if (process.env.NODE_ENV === 'development') {

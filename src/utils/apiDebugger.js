@@ -2,7 +2,7 @@
 // Use this in browser console to test API connectivity
 
 const testAPI = async () => {
-  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://navjivanspringboot-production.up.railway.app';
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://navjivanspringboot-production.up.railway.app';
   
   console.log('🔍 Testing DevTunnel Connection...');
   console.log(`📍 Backend URL: ${API_BASE_URL}`);
