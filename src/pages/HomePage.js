@@ -143,10 +143,10 @@ function HomePage() {
 
             <p>
               <strong>Email:</strong>{' '}
-              <a href="ajupavar@gmail.com">navjivan@gmail.com</a>
+              <a href="ajitbhai7@gmail.com">ajitbhaipavar7@gmail.com</a>
             </p>
 
-            <p><strong>Timings:</strong> 10:00 AM – 5:00 PM</p>
+            <p><strong>Timings:</strong> 9:00 AM – 8:00 PM</p>
           </div>
         </div>
       </section>
