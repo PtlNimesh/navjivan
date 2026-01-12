@@ -52,7 +52,7 @@ function HomePage() {
 
       {/* Hero Section */}
       <header className="hero-section" id="home">
-      
+      <img src={bannerImage} alt="Banner" className="banner-image" />
         <div className="container">
           <h2>Welcome to Navjivan Dental Clinic  </h2>
           <p>Your smile is our priority. Experience top-notch dental care with us.</p>
