@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import AppointmentForm from '../components/AppointmentForm';
 import { API_ENDPOINTS } from '../config/api';
+import ajuImage from '../img/bot.png';
+import bannerImage from '../img/banner.jpeg';
 
 function HomePage() {
   // Smooth Scroll Handler
@@ -51,13 +53,16 @@ function HomePage() {
 
       {/* Hero Section */}
       <header className="hero-section" id="home">
+      {/* <img src={bannerImage} alt="Banner" className="home-banner" /> */}
         <div className="container">
-          <h2>Welcome to Navjivan Dental Clinic</h2>
+          <h2>Welcome to Navjivan Dental Clinic  </h2>
           <p>Your smile is our priority. Experience top-notch dental care with us.</p>
           <a href="#services" className="button" onClick={handleNavLinkClick}>
             Our Services
           </a>
         </div>
+        <img src={ajuImage} alt="bot" className="aju" />
+
       </header>
 
       {/* Services Section */}

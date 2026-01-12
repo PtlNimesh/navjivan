@@ -122,8 +122,6 @@ function AppointmentForm({ onBookAppointment, editingAppointment = null }) {
               name="appointmentTime"
               value={appointment.appointmentTime}
               onChange={handleChange}
-              min="09:00"
-              max="19:00"
               required
             />
           </div>
